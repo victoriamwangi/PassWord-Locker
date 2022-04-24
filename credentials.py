@@ -1,3 +1,6 @@
+from operator import truediv
+
+
 class Credential:
 
     accountsList = []
@@ -18,3 +21,9 @@ class Credential:
         deleteCredential method deletes a saved account from the accountsList
         '''
         Credential.accountsList.remove(self)
+
+    @classmethod
+    def findAccount(cls, name):
+        for account in cls.accountsList:
+            if account.accountName == name:
+                return account

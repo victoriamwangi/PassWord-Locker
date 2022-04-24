@@ -1,3 +1,4 @@
+from cgi import test
 import unittest
 from credentials import Credential
 
@@ -30,6 +31,17 @@ class TestCredential(unittest.TestCase):
         testCredential.saveCredential()
         self.newCredential.deleteCredential()
         self.assertEqual(len(Credential.accountsList), 1)
+
+    def test_findAccount(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the account.
+        '''
+        self.newCredential.saveCredential()
+        testCredential = Credential("twitter", "2222")
+        testCredential.saveCredential()
+        foundCredential = Credential.findAccount("twitter")
+        self.assertEqual(foundCredential.accountName,
+                         testCredential.accountName)
 
 
 if __name__ == "__main__":
