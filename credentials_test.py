@@ -21,6 +21,16 @@ class TestCredential(unittest.TestCase):
         self.newCredential.saveCredential()
         self.assertEqual(len(Credential.accountsList), 1)
 
+    def test_deleteCredential(self):
+        '''
+            test deleteCredential to test if we can remove an account from our accounts list
+        '''
+        self.newCredential.saveCredential()
+        testCredential = Credential("vic", "2222")
+        testCredential.saveCredential()
+        self.newCredential.deleteCredential()
+        self.assertEqual(len(Credential.accountsList), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

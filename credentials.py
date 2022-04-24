@@ -12,3 +12,9 @@ class Credential:
         this method saves account objects into accountsList
         '''
         Credential.accountsList.append(self)
+
+    def deleteCredential(self):
+        '''
+        deleteCredential method deletes a saved account from the accountsList
+        '''
+        Credential.accountsList.remove(self)
