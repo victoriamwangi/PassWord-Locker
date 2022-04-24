@@ -6,3 +6,9 @@ class Credential:
         self.accountName = accountName
         self.password = password
     pass
+
+    def saveAccount(self):
+        '''
+        this method saves account objects into accountsList
+        '''
+        Credential.accountsList.append(self)
