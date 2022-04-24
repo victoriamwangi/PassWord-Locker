@@ -43,6 +43,13 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(foundCredential.accountName,
                          testCredential.accountName)
 
+    def test_accountExist(self):
+        self.newCredential.saveCredential()
+        testCredential = Credential("twitter", "0000")
+        testCredential.saveCredential()
+        credentialExist = Credential.account_exists("twitter")
+        self.assertTrue(credentialExist)
+
 
 if __name__ == "__main__":
     unittest.main()

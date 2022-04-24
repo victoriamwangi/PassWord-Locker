@@ -27,3 +27,10 @@ class Credential:
         for account in cls.accountsList:
             if account.accountName == name:
                 return account
+
+    @classmethod
+    def account_exists(cls, name):
+        for account in cls.accountsList:
+            if account.accountName == name:
+                return True
+        return False
