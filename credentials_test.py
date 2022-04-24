@@ -17,6 +17,10 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.newCredential.accountName, "twitter")
         self.assertEqual(self.newCredential.password, "0000")
 
+    def test_saveCredential(self):
+        self.newCredential.saveCredential()
+        self.assertEqual(len(Credential.accountsList), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
