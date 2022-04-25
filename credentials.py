@@ -18,12 +18,12 @@ class Credential:
         '''
         Credential.accountsList.append(self)
 
-    def newAccountCredentials(account, username, password, autogenerate):
-        if(autogenerate):
-            alphabet = string.ascii_letters + string.digits
-            password = ''.join(secrets.choice(alphabet)for i in range(6))
-        cred = Credential(account, username, password)
-        Credential.accountsList.append(cred)
+    # def newAccountCredentials(account, username, password, autogenerate):
+    #     if(autogenerate):
+    #         alphabet = string.ascii_letters + string.digits
+    #         password = ''.join(secrets.choice(alphabet)for i in range(6))
+    #     cred = Credential(account, username, password)
+    #     Credential.accountsList.append(cred)
 
     def deleteCredential(self):
         '''
