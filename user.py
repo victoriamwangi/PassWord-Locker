@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.9
 class User:
-    user = None
+    userName = None
+    password = None
 
     def __init__(self, userName, password):
         self.userName = userName
@@ -8,7 +9,7 @@ class User:
 
     pass
 
-    def saveUser(self):
+    def createUser(self, userName, password):
         """
         Create and save a user in variable user
         """
