@@ -30,7 +30,6 @@ to open project on vs code run: code .
 1. Displays account creation message
    - INPUT: "User's Enter their name"
    - INPUT: "User's their password"
-   - INPUT: "User's Enter the Quote"
    - OUTPUT: "User's redirect to menu after successful login"
 2. Displays an Error Message if any Inputs left blank
    - INPUT: ""
